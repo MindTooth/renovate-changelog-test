@@ -8,25 +8,14 @@
     ":disableRateLimiting"
   ],
 
-  "enabledManagers": ["dockerfile", "regex"],
+  "enabledManagers": ["dockerfile"],
 
   "packageRules": [
     {
       "matchPackageNames": ["passbolt/passbolt"],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:-(?<build>\\d+)-(?<compatibility>.+))?$",
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:-(?<revision>\\d+)-(?<compatibility>.+))?$",
 
       "customChangelogUrl": "https://github.com/passbolt/passbolt_api"
-    }
-  ],
-
-  "regexManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": ["^Dockerfile$"],
-      "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?_version\\s*=\\s*\"(?<currentValue>.*)\""
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
     }
   ]
 }
