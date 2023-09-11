@@ -13,7 +13,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["passbolt/passbolt"],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:-(?<revision>\\d+)-(?<compatibility>.+))?$",
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:-(?<build>\\d+)-(?<compatibility>.+))?$",
 
       "customChangelogUrl": "https://github.com/passbolt/passbolt_api"
     }
