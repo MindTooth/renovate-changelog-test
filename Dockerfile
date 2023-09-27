@@ -1,1 +1,1 @@
-FROM passbolt/passbolt:4.1.2-1-ce
+FROM passbolt/passbolt:4.3.0-1-ce@sha256:67bb67c0ba262dafb6190997259df28891ee8cbc49b0925d6a031a151226b51e
